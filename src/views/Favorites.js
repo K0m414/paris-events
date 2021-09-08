@@ -1,13 +1,13 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 
-const Events = () => {
+const favorites = () => {
     return (
         <div>
             <Navbar />
-            <h1>La liste des événements</h1>
+            <h1>Favoris</h1>
         </div>
     );
 };
 
-export default Events;
+export default favorites;

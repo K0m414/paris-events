@@ -3,9 +3,9 @@ import './App.css';
 // import Data from './components/Data';
 import Home from './views/Home';
 import NotFound from './views/NotFound';
-import Events from './views/Events';
+import SearchEvents from './views/SearchEvents';
 import Event from './views/Event';
-import Favoris from './views/Favoris';
+import Favorites from './views/Favorites';
 import {BrowserRouter, Switch, Route} from "react-router-dom"
 
 
@@ -15,8 +15,8 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/liste-des-evenements" exact component={Events} />
-        <Route path="/favoris" exact component={Favoris} />
+        <Route path="/recherche-des-evenements" exact component={SearchEvents} />
+        <Route path="/vos-favoris" exact component={Favorites} />
         <Route path="/evenement" exact component={Event} /> {/* mettre id de l'evenement => `evenement${id}` */}
         <Route component={NotFound}/>
       </Switch>
