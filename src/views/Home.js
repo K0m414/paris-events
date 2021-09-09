@@ -1,14 +1,15 @@
 import React from 'react';
 import EventsData from '../components/EventsData';
 import Navbar from '../components/Navbar';
-import Form from '../components/Form';
+
 const Home = () => {
     return (
         <div>
             <Navbar />
             <h1>Bienvenue sur Paris Events</h1>
+            <h2>La dernière actualité</h2>
             <EventsData />
-            <Form />
+            
         </div>
     );
 };

@@ -1,26 +1,36 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import Card from './Card';
+// import Card from './Card';
 
 const EventsData = () => {
     const[data, setData] = useState([]);
-    const url = "https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records"
+    const URL = "https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?sort=date_start&limit=1&pretty=false&timezone=UTC"
 
     useEffect(() =>{
-        axios.get(url)
-        .then((res) => console.log(res.data.records));
-        //console.log(data);
-
+        axios.get(URL)
+        .then((response) =>setData(response.data.records[0].record));
+        
     },[])
-    
+  
+    // console.log(data);
     return (
         <div>
-            {/* <ul>
-                {data.map((eventdata)=>(
-                    <Card eventdata={eventdata} key={eventdata.name} />
-                ))}
-                
-            </ul> */}
+
+            {   data.fields &&
+
+            <div>
+                <img src={data.fields.cover.url} alt={data.fields.cover.filename}/>
+                <ul>
+                    <li>{data.fields.title}</li>
+                    <li>Débute le : {data.fields.date_start}</li>
+                    <li>Termine le : {data.fields.date_end}</li>
+                    <li>Description : {data.fields.description}</li>
+                    
+                </ul>
+                <p>{data.id}</p>
+                <button>Favoris</button>
+            </div> 
+            }
         </div>
     );
 };
