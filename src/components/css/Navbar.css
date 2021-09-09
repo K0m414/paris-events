@@ -1,0 +1,27 @@
+nav {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+nav ul {
+    font-size:1.5em;
+    color:white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav li a, nav li a:visited {
+    color:white;
+    font-weight: bold;
+    padding: 0.2em;
+  }
+
+nav li a:hover {
+    color:white;
+    font-weight: bold;
+    background-color: #373528;
+    border-radius: 5px;
+}

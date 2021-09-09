@@ -1,52 +1,49 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-// import EventsData from '../components/EventsData';
+import Card from '../components/Card';
 import Navbar from '../components/Navbar';
+import "./css/SearchEvents.css"
 
 const SearchEvents = () => {
+
     const [datas, setDatas] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
+    const URL="https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?limit=3&search=" // revoir la limitation
   
     useEffect(() =>{
-        fetch('https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records')
-        .then(response => response.json())
-        .then(json => setDatas(json.records[0].record))
-    }, [])
-    
+        axios.get(URL+searchTerm)
+        .then((response) =>setDatas(response.data.records));
+    }, [searchTerm])
 
-    const handleSearchTermClick = (e) =>{
-        e.preventDefault()
-        let value = e.target;
-        console.log(value);
+    const handleSearchTerm = (e) =>{
+        let value = e.target.value;
+        setSearchTerm(value)
     };
-    console.log(searchTerm)
-    console.log(datas)
-    
-    return (
-        
-        <div>
-            <Navbar />
-            <h1>La liste des événements</h1>
-            <form>
-                <label>Rechercher un évément par titre</label>
-                <input type='search' className='input'/>
-                <input type="submit" onClick = {handleSearchTermClick}  value="Rechercher"/>
-            </form>
-             <div>
-                {/* {datas
-                // .filter((eventdata) => {
-                //      return eventdata.title.includes(searchTerm);
-                // })
 
-                // .map((eventdata)=>{
-                //     return(
-                //         <div key={eventdata.id} >
-                //             {eventdata.title}
-                //         </div>
-                //         )
-                   
-                // })    
-            } */}
-            </div> 
+    return (
+        <div className="page">
+            <Navbar />
+            
+            <div className="main-content">
+                <h1>La liste des événements</h1>
+                    <input placeholder= "Rechercher un évément par titre" type='search' onChange = {handleSearchTerm} className='searchTermInput'/>
+               
+                <div className="event-card">
+                    {datas
+                    .filter((eventdata) => {
+                        return eventdata.record.fields.title.toLowerCase().includes(searchTerm.toLowerCase());
+                    })
+                    .map((eventdata)=>{
+                        return(
+                            <div className="div" key={eventdata.record.id} >
+                                <Card eventdata={eventdata} />
+                            </div>
+                        )
+                    })
+                    }
+                </div>
+            </div>
+        
         </div>
     );
 

@@ -1,28 +1,31 @@
 import React from "react";
 
-class Form extends React.Component {
-  constructor(props) {
+export default class Form extends React.Component {
+
+  constructor(props){
     super(props);
-    this.state = {value: ''};
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
+  }
+  onSubmit(e) {
+      e.preventDefault();
+      var title = this.title.value;
+      console.log(title);
+
   }
 
-  handleChange(event) {    this.setState({value: event.target.value});  }
-  handleSubmit(event) {
-    alert('Le nom a été soumis : ' + this.state.value);
-    event.preventDefault();
+  render(){
+    
+      return(
+          <div>
+
+            <form className="form">
+              <label>Rechercher un évément par titre</label>
+              <input type="text" className="input-value" ref={(c) => this.title = c} name="title" />
+            </form>
+
+      <button type="button" onClick={this.onSubmit} className="btn">Rechercher</button>
+          </div>
+      )
   }
 
-  render() {
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Nom :
-          <input type="text" value={this.state.value} onChange={this.handleChange} />        </label>
-        <input type="submit" value="Envoyer" />
-      </form>
-    );
-  }
-}
-export default Form;
+};

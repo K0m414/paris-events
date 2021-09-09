@@ -1,15 +1,17 @@
 import React from 'react';
-import EventsData from '../components/EventsData';
+import LatestEvent from '../components/LatestEvent';
 import Navbar from '../components/Navbar';
-
+import "./css/Home.css"
 const Home = () => {
     return (
-        <div>
+        <div className="page">
             <Navbar />
-            <h1>Bienvenue sur Paris Events</h1>
-            <h2>La dernière actualité</h2>
-            <EventsData />
+            <div className="main-content">
+                <h1>Bienvenue sur Paris Events</h1>
+                <h2>Voici la dernière actualité</h2>
             
+            <LatestEvent />
+            </div>
         </div>
     );
 };

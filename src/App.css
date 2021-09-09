@@ -1,38 +1,48 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+.page {
+    background-image: url(assets/img-paris-1-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color:#373528;
+  }
+
+h1, h2, h3{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+  font-size:3em;
+}
+h2{
+  font-size:2.5em;
+}
+h3{
+  font-size:2em;
+  margin: 0.5em;
+}
+.main-content{
+  margin:auto;
+  max-width:80%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+a{
+  text-decoration: none;
+  color:#373528;
+}
+li{
+  list-style: none;
+}
+ul{
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+p{
+  margin:0.1em 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-    display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
