@@ -20,7 +20,7 @@ const LatestEvent = () => {
             {   eventData.fields &&
                 
             <div>
-                <h3 key={"title"+eventData.id}><a href="ghf">{eventData.fields.title}</a></h3>
+                <h3 key={"title"+eventData.id}><a href="/evenement/id=">{eventData.fields.title}</a></h3>
                 <div  className="event-content">
                     <img key={"img"+eventData.id} src={eventData.fields.cover.url} alt={eventData.fields.cover.filename}/>
                     <ul>
