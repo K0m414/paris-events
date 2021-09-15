@@ -1,18 +1,5 @@
 /* //revoir jusqu'a ligne ul pour responsive */
-.event-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
 
-.event-content img {
-    display:block;
-    width:45%;
-}
-.event-content ul {
-    display:block;
-    width:45%;
-}
 
 button {
     margin: 1em auto;
@@ -29,3 +16,49 @@ button:hover {
     background-color: #373528;
     border-radius: 5px;
 }
+.none{
+    display:none;
+}
+.event-content li{
+    font-size: 1.5em
+}
+/*Style pour smartphone */
+@media screen and (max-width:480px) {
+    .event-content{
+        padding: 1% 5%;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin: 3%;
+    }
+    .event-content img{
+        width: 100%;
+        margin: auto;
+        padding: 0 2%;
+    }
+    ul{
+        margin-top: 0px;
+    }
+}
+
+
+  /*Style pour tablette */
+@media screen and (min-width:480px) and (max-width:959px) {
+   
+  }
+
+  /*Style pour ordinateur Ecran taille normal*/
+@media screen and (min-width:960px) {
+    .event-content {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .event-content img {
+        display:block;
+        width:45%;
+    }
+    .event-content ul {
+        display:block;
+        width:45%;
+    }
+  }

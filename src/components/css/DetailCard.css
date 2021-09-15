@@ -1,0 +1,54 @@
+/*Style pour smartphone */
+.detail-card{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    width: 90%;
+    padding: 3%;
+    box-shadow: 10px 5px 5px #373528;
+    top: 10%;
+    right: 5%;
+    z-index: 5;
+}
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    
+}
+
+@media screen and (max-width:480px) {
+
+}
+
+/*Style pour tablette */
+@media screen and (min-width:480px) and (max-width:959px) {
+ 
+}
+
+/*Style pour ordinateur Ecran taille normal*/
+@media screen and (min-width:960px) {
+.event-detail{
+    display:flex;
+    justify-content:space-between; 
+    justify-content:wrap; 
+}
+.event-detail img{
+width:40%;
+}
+.event-description{
+    width:38%;
+    padding:1%;
+}
+.event-infos{
+    background-color: rgba(0, 0, 0, 0.3);
+    width:20%;
+    padding:1%;
+}
+}

@@ -1,0 +1,29 @@
+/*style général pour le component ErrorData.js*/
+.page-error-API p{
+    text-align:center;
+    color:red;
+}
+
+/*Style pour smartphone */
+@media screen and (max-width:480px) {
+    .page-error-API p{
+        font-size:1.5em;
+        margin:1em;
+    }
+}
+
+/*Style pour tablette */
+@media screen and (min-width:480px) and (max-width:959px) {
+    .page-error-API p{
+        font-size:2.5em;
+        margin:1.5em;
+    }
+}
+
+/*Style pour ordinateur Ecran taille normal*/
+@media screen and (min-width:960px) {
+    .page-error-API p{
+        font-size:3.5em;
+        margin:1.8em;
+    }
+}
