@@ -51,7 +51,9 @@ const SearchEvents = () => {
                 {datas
                 .map((eventdata)=>{
                     return(
-                        <Card eventdata={eventdata} />
+                        <div className="div" key={eventdata.record.id} >
+                            <Card eventdata={eventdata} />
+                        </div>
                     )
                 })
                 }
@@ -59,7 +61,7 @@ const SearchEvents = () => {
             {/* message apparait des que les evenements recherché sont infirieur a 1o */}
             {errorTerm &&
                 <div className="error-term">
-                    <p>Plus aucun événement ne correspond a votre recherche. Veuillez réessayer avec un autre mot.</p>
+                    <p>Plus aucun événement ne correspond a votre recherche. Pour avoir plus de résultats réessayer avec un autre mot.</p>
                 </div>
             }
             {errorData &&

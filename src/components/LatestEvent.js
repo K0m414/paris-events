@@ -22,9 +22,9 @@ const LatestEvent = (props) => {
         <div className="latest-event">
             {   eventData.fields &&
                 <div  className={isActive ? "latest-event" : "none"}> {/* change de class selon isActive */}
-                    <h3 key={"title"+eventData.id} onClick={SearchDetailEvent}>{eventData.fields.title}</h3>
+                    <h3 onClick={SearchDetailEvent}>{eventData.fields.title}</h3>
                     <div  className="event-content">
-                        <img key={"img"+eventData.id} src={eventData.fields.cover.url} alt={eventData.fields.cover.filename}/>
+                        <img src={eventData.fields.cover.url} alt={eventData.fields.cover.filename}/>
                         <ul>
                             <li key={"title"+eventData.id}>{eventData.fields.title}</li>
                             <li key={"date-start"+eventData.id}>Débute le {EventServices.LocalDate(eventData.fields.date_start)} à {EventServices.LocalHour(eventData.fields.date_start)}</li>
