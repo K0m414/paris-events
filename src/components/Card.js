@@ -22,9 +22,9 @@ const Card = (props) => {
             <div className="all-cards">
             {!displayEventDetail && 
                 <div className="card">
-                    <h3 key={"title"+eventdata.record.id} onClick={SearchDetailEvent}>{eventdata.record.fields.title}</h3>
+                    <h3 onClick={SearchDetailEvent}>{eventdata.record.fields.title}</h3>
                     <div className="card-content">
-                    <img key={"img"+eventdata.record.id} src={eventdata.record.fields.cover.url} alt={"image de "+eventdata.record.fields.cover_alt}/>
+                    <img src={eventdata.record.fields.cover.url} alt={"image de "+eventdata.record.fields.cover_alt}/>
                     <ul>
                         <li key={"date-start"+eventdata.record.id}>Débute le {EventServices.LocalDate(eventdata.record.fields.date_start)} à {EventServices.LocalHour(eventdata.record.fields.date_start)}</li>
                         <li key={"date-end"+eventdata.record.id}>Termine le {EventServices.LocalDate(eventdata.record.fields.date_end)} à {EventServices.LocalHour(eventdata.record.fields.date_end)}</li>

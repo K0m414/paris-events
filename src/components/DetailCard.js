@@ -16,7 +16,7 @@ const DetailCard = ({event, onClose}) => {
                     <button className="close-detail" onClick={() =>  onClose()}>Fermer</button>
                     <h1>{EventData.fields.title}</h1>
                     <div  className="event-detail">
-                        <img key={"img"+eventID} src={EventData.fields.cover.url} alt={"image de "+EventData.fields.cover_alt}/>
+                        <img src={EventData.fields.cover.url} alt={"image de "+EventData.fields.cover_alt}/>
                         <div className="event-description">
                             <h4>Description : </h4>
                             <p dangerouslySetInnerHTML={{ __html: EventData.fields.description }}></p>
