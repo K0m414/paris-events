@@ -1,11 +1,10 @@
+/*style général pour les evenements recherchés*/
 .card button {
     margin-top: 12px;
     padding: 4px 8px;
     background-color: rgba(255, 255, 255, 0.3);
     border: none;
     border-radius: 3px;
-    cursor: pointer;
-    transition: ease .3s;
 }
 
 .card button:hover {
@@ -26,40 +25,19 @@
     background-color: #373528;
     border-radius: 5px;
 }
-
-
-/*Style pour smartphone */
-@media screen and (max-width:480px) {
-    .card{
-        padding: 1% 5%;
-        background-color: rgba(255, 255, 255, 0.5);
-        margin: 3%;
-    }
-    .card img{
-        width: 100%;
-        margin: auto;
-        padding: 0 2%;
-    }
-    ul{
-        margin-top: 0px;
-    }
+.card{
+    padding: 1% 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 3%;
+    border-radius: 20px;
 }
-
-/*Style pour tablette */
-@media screen and (min-width:480px) and (max-width:959px) {
-    .card{
-        padding: 1% 5%;
-        background-color: rgba(255, 255, 255, 0.5);
-        margin: 3%;
-    }
-    .card img{
-        width: 100%;
-        margin: auto;
-        padding: 0 2%;
-    }
-    ul{
-        margin: 0 auto;
-    }
+.card img{
+    width: 100%;
+    margin: auto;
+    padding: 0 2%;
+}
+.card ul{
+    margin: 0 auto;
 }
 
 /*Style pour ordinateur Ecran taille normal*/

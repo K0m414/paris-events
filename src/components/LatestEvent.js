@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-// import StorageService from '../services/StorageService';
+import EventServices from '../services/EventServices';
 // import Card from './Card';
 import "./css/LatestEvent.css"
 import DetailCard from './DetailCard';
@@ -42,8 +42,10 @@ const LatestEvent = () => {
                         <img key={"img"+eventData.id} src={eventData.fields.cover.url} alt={eventData.fields.cover.filename}/>
                         <ul>
                             <li key={"title"+eventData.id}>{eventData.fields.title}</li>
-                            <li key={"date-start"+eventData.id}>Débute le : {eventData.fields.date_start}</li>
-                            <li key={"date-end"+eventData.id}>Termine le : {eventData.fields.date_end}</li>
+                            <li key={"date-start"+eventData.id}>Débute le {EventServices.LocalDate(eventData.fields.date_start)} à {EventServices.LocalHour(eventData.fields.date_start)}</li>
+                            <li key={"date-end"+eventData.id}>Termine le {EventServices.LocalDate(eventData.fields.date_end)} à {EventServices.LocalHour(eventData.fields.date_end)}</li>
+                            <li key={"category"+eventData.id}>Catégorie : {eventData.fields.category}</li>
+                            <li key={"description"+eventData.id}>Description : {eventData.fields.lead_text}</li>
                         </ul>
                     </div>
                     <ManageFavorite id ={eventData.id} />

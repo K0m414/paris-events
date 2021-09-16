@@ -9,34 +9,35 @@ const SearchEvents = () => {
     const [datas, setDatas] = useState([]);
     const [errorData, setErrorData] = useState(false);
     const [errorTerm, setErrorTerm] = useState(false);
-    const [searchTerm, setSearchTerm] = useState("");
+    const [searchTerm, setSearchTerm] = useState(""); // term dans la barre de recherche
     const URL="https://opendata.paris.fr/api/v2/catalog/datasets/que-faire-a-paris-/records?limit=10&search="
   
-    useEffect(() =>{
+    useEffect(() =>{ // se déclenche va chercher les elements dans l'api
         axios.get(URL)
-        .then((response) =>setDatas(response.data.records))
+        .then((response) =>setDatas(response.data.records)) // les elements sont dans datas
         .catch(e => {
-            setErrorData(true)
+            setErrorData(true) //si il y a une erreur alors changement de l'état l'erreur en true 
             console.log('erreur')});
     }, [])
 
-    const Reload = () => {
+    const Reload = () => { // active au click
         axios.get(URL+searchTerm)
-        .then((response) =>setDatas(response.data.records))
+        .then((response) =>setDatas(response.data.records)) // les elements dans datas sont rechargés
         .catch(e => {
             setErrorData(true)
             console.log('erreur')});
             ErrorTermCheck();
     };
-    const ErrorTermCheck = ()=>{
-        if([] && datas.length){
-         setErrorTerm(true)
+    const ErrorTermCheck = ()=>{ // vérifie si plus aucun élément ne correspond a la recherche 
+        if(datas.length  === 0){
+            // console.log(datas.length)
+            setErrorTerm(true)
         }
      };
      
-    const handleSearchTerm = (e) =>{
+    const handleSearchTerm = (e) =>{ // recupère dans le input le term
         let value = e.target.value;
-        setSearchTerm(value)
+        setSearchTerm(value) // sa valeur est dans searchTerm
     };
  
     return (        
@@ -49,19 +50,16 @@ const SearchEvents = () => {
             <div className="event-card">
                 {datas
                 .map((eventdata)=>{
-                    // console.log(eventdata.record.id);
                     return(
-                        
-                        <div className="div" key={eventdata.record.id} >
-                            <Card eventdata={eventdata} />
-                        </div>
+                        <Card eventdata={eventdata} />
                     )
                 })
                 }
             </div>
+            {/* message apparait des que les evenements recherché sont infirieur a 1o */}
             {errorTerm &&
                 <div className="error-term">
-                    <p>Aucun événement ne correspond a votre recherche. Veuillez réessayer avec un autre mot.</p>
+                    <p>Plus aucun événement ne correspond a votre recherche. Veuillez réessayer avec un autre mot.</p>
                 </div>
             }
             {errorData &&

@@ -7,7 +7,7 @@ import ManageFavorite from './ManageFavorite';
 const Card = (props) => {
     // donnée reçu searchevents.js
     const eventdata = props.eventdata;
-    const [displayEventDetail, setDisplayEventDetail] =useState(false);
+    const [displayEventDetail, setDisplayEventDetail] =useState(false); // affichage des details
 
     const SearchDetailEvent = () => { // affiche
         setDisplayEventDetail(true) 
@@ -18,8 +18,8 @@ const Card = (props) => {
       }
 
     return(
-        <div className="wrap">
-            <div className={displayEventDetail ? "dfg" : "all-cards"}>
+        <div className="search-result">
+            <div className="all-cards">
             {!displayEventDetail && 
                 <div className="card">
                     <h3 key={"title"+eventdata.record.id} onClick={SearchDetailEvent}>{eventdata.record.fields.title}</h3>

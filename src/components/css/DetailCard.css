@@ -10,26 +10,17 @@
     right: 5%;
     z-index: 5;
 }
-.overlay {
-    position: fixed; /* Sit on top of the page content */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
+.overlay { /* background qui recouvre le fond */
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
-    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 2; 
     
-}
-
-@media screen and (max-width:480px) {
-
-}
-
-/*Style pour tablette */
-@media screen and (min-width:480px) and (max-width:959px) {
- 
 }
 
 /*Style pour ordinateur Ecran taille normal*/
@@ -37,7 +28,6 @@
 .event-detail{
     display:flex;
     justify-content:space-between; 
-    justify-content:wrap; 
 }
 .event-detail img{
 width:40%;

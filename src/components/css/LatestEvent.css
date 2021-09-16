@@ -1,6 +1,4 @@
-/* //revoir jusqu'a ligne ul pour responsive */
-
-
+/*style général pour le dernier evenement*/
 button {
     margin: 1em auto;
     display:block;
@@ -14,36 +12,29 @@ button:hover {
     color:white;
     font-weight: bold;
     background-color: #373528;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 .none{
     display:none;
 }
-.event-content li{
+.event-content ul{
     font-size: 1.5em
-}
-/*Style pour smartphone */
-@media screen and (max-width:480px) {
-    .event-content{
-        padding: 1% 5%;
-        background-color: rgba(255, 255, 255, 0.5);
-        margin: 3%;
-    }
-    .event-content img{
-        width: 100%;
-        margin: auto;
-        padding: 0 2%;
-    }
-    ul{
-        margin-top: 0px;
-    }
-}
 
-
-  /*Style pour tablette */
-@media screen and (min-width:480px) and (max-width:959px) {
-   
-  }
+}
+.event-content{
+    padding: 1% 5%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    margin: 3%;
+}
+.event-content img{
+    width: 100%;
+    margin: auto;
+    padding: 0 2%;
+}
+.event-content ul{
+    margin-top: 0px;
+}
 
   /*Style pour ordinateur Ecran taille normal*/
 @media screen and (min-width:960px) {
@@ -55,10 +46,10 @@ button:hover {
     
     .event-content img {
         display:block;
-        width:45%;
+        width:50%;
     }
     .event-content ul {
         display:block;
-        width:45%;
+        width:50%;
     }
   }

@@ -1,5 +1,6 @@
 import "./css/DetailCard.css"
 import EventServices from '../services/EventServices';
+import ManageFavorite from "./ManageFavorite";
 
 const DetailCard = ({event, onClose}) => {
     // donnée envoyé par les'parents'
@@ -20,31 +21,31 @@ const DetailCard = ({event, onClose}) => {
                             <h4>Description : </h4>
                             <p dangerouslySetInnerHTML={{ __html: EventData.fields.description }}></p>
                         </div>
-                        <div className="event-infos">
-                            <h4>Dates : </h4>
-                            <p>Du {EventServices.LocalDate(EventData.fields.date_start)} au {EventServices.LocalDate(EventData.fields.date_end)}</p>
-                            <h4>Prix : </h4>
-                                <p>{EventData.fields.price_detail}</p>
-                            <h4>S'y rendre : </h4>
-                            <h5>Adresse : </h5>
-                                <ul className="address">
-                                    <li key={"address_name"+eventID}>{EventData.fields.address_name}</li>
-                                    <li key={"address_street"+eventID}>{EventData.fields.address_street}</li>
-                                    <li key={"address_zipcode"+eventID}>{EventData.fields.address_zipcode} {EventData.fields.address_city}</li>
-                                </ul>      
-                            <h5>En transport : </h5>
-                            <p>{EventData.fields.transport}</p>
-                            <h4>Plus d'info : </h4>
-                                <ul>
-                                    <li key={"contact_phone"+eventID}>{EventData.fields.contact_phone}</li>
-                                    <li key={"contact_mail"+eventID}>{EventData.fields.contact_mail}</li>
-                                    <li key={"contact_twitter"+eventID}>{EventData.fields.contact_twitter}</li>
-                                    <li key={"contact_facebook"+eventID}>{EventData.fields.contact_facebook}</li>
-                                    
-                                </ul>
+                            <div className="event-infos">
+                                <h4>Dates : </h4>
+                                <p>Du {EventServices.LocalDate(EventData.fields.date_start)} au {EventServices.LocalDate(EventData.fields.date_end)}</p>
+                                <h4>Prix : </h4>
+                                    <p>{EventData.fields.price_detail}</p>
+                                <h4>S'y rendre : </h4>
+                                <h5>Adresse : </h5>
+                                    <ul className="address">
+                                        <li key={"address_name"+eventID}>{EventData.fields.address_name}</li>
+                                        <li key={"address_street"+eventID}>{EventData.fields.address_street}</li>
+                                        <li key={"address_zipcode"+eventID}>{EventData.fields.address_zipcode} {EventData.fields.address_city}</li>
+                                    </ul>      
+                                <h5>En transport : </h5>
+                                <p>{EventData.fields.transport}</p>
+                                <h4>Plus d'info : </h4>
+                                    <ul>
+                                        <li key={"contact_phone"+eventID}>{EventData.fields.contact_phone}</li>
+                                        <li key={"contact_mail"+eventID}>{EventData.fields.contact_mail}</li>
+                                        <li key={"contact_twitter"+eventID}>{EventData.fields.contact_twitter}</li>
+                                        <li key={"contact_facebook"+eventID}>{EventData.fields.contact_facebook}</li>
+                                        
+                                    </ul>
+                            </div>
                         </div>
-                    </div>
-                    <button className="btn">Favoris</button>
+                    <ManageFavorite id ={eventID} />
                     </div>
                     </div>}
             
