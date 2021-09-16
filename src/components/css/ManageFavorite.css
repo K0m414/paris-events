@@ -1,0 +1,16 @@
+/*STYLE SUR LE BUTTON FAVORIS*/
+.favorite-button{
+    margin: 1em auto;
+    display:block;
+    text-align:center;
+    padding: 0.7em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+}
+
+.favorite-button:hover {
+    color:white;
+    font-weight: bold;
+    background-color: #373528;
+    border-radius: 8px;
+}

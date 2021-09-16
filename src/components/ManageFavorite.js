@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import StorageService from '../services/StorageService';
-
+import "./css/ManageFavorite.css"
 const ManageFavorite = (id) => {
     const [favotitesEventsID, setFavotitesEventsID] = useState(false); // initialise à false
     // const KEY = "parisEventsFavoritesID";
@@ -30,7 +30,7 @@ const ManageFavorite = (id) => {
     return (
         <div>
             {/* se declenche au click sur le button */}
-            <button onClick={favoriteButton}>favoris</button>
+            <button className="favorite-button" onClick={favoriteButton}>favoris</button>
         </div>
     );
 };

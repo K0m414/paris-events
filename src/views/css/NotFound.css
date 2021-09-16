@@ -1,7 +1,8 @@
-h1{
+.not-found h1{
     color: red;
     text-transform: uppercase;
 }
-p{
+.not-found p{
+    color: red;
     text-align:center
 }

@@ -4,23 +4,13 @@
     box-sizing: border-box;
 }
 
-.page {
-    background-image: url(assets/img-paris-1-bg.jpg);
-    min-height: 100vh;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    font-family: 'Open Sans Condensed', sans-serif;
-    color:#373528;
-  }
-
+/* titre */
 h1, h2, h3{
   text-align: center;
 }
 h1{
   font-size:3em;
     margin:1%;
-
 }
 h2{
   font-size:2.5em;
@@ -38,20 +28,20 @@ h5{
   font-size:1.3em;
   margin: 0.1em;
 }
+
+/* image */
 img{
   width:100%;
   border-radius:8px;
 }
-.main-content{
-  margin:auto;
-  max-width:80%;
-  background-color: rgba(255, 255, 255, 0.7);
-  min-height: 75vh;
-}
+
+/* lien */
 a{
   text-decoration: none;
   color:#373528;
 }
+
+/* liste */
 li{
   list-style: none;
 }
@@ -59,7 +49,24 @@ ul{
   padding: 0;
 }
 
+/* paragraphe */
 p{
   margin:0.1em 0;
 }
 
+/* contenu */
+.page {
+  background-image: url(assets/img-paris-1-bg.jpg);
+  min-height: 100vh;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  color:#373528;
+}
+.main-content{
+margin:auto;
+max-width:80%;
+background-color: rgba(255, 255, 255, 0.7);
+min-height: 75vh;
+}

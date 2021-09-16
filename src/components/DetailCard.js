@@ -13,7 +13,7 @@ const DetailCard = ({event, onClose}) => {
             <div>
             <div className="overlay"></div>
                 <div className="detail-card">
-                    <button onClick={() =>  onClose()}>Fermer</button>
+                    <button className="close-detail" onClick={() =>  onClose()}>Fermer</button>
                     <h1>{EventData.fields.title}</h1>
                     <div  className="event-detail">
                         <img key={"img"+eventID} src={EventData.fields.cover.url} alt={"image de "+EventData.fields.cover_alt}/>

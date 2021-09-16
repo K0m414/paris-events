@@ -20,7 +20,25 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5); 
     z-index: 2; 
-    
+}
+
+/* button close-detail*/
+.close-detail{
+    margin: 1em auto;
+    display:block;
+    text-align:center;
+    padding: 0.7em;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px #373528;
+}
+.close-detail:hover {
+    color:white;
+    font-weight: bold;
+    background-color: #373528;
+    border-radius: 5px;
+    box-shadow: none;
 }
 
 /*Style pour ordinateur Ecran taille normal*/
@@ -40,5 +58,6 @@ width:40%;
     background-color: rgba(0, 0, 0, 0.3);
     width:20%;
     padding:1%;
+    border-radius: 8px;
 }
 }
