@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/paris-events/static/css/main.7b18ae30.chunk.css",
+    "main.js": "/paris-events/static/js/main.1e051b1b.chunk.js",
+    "main.js.map": "/paris-events/static/js/main.1e051b1b.chunk.js.map",
+    "runtime-main.js": "/paris-events/static/js/runtime-main.9e26b342.js",
+    "runtime-main.js.map": "/paris-events/static/js/runtime-main.9e26b342.js.map",
+    "static/js/2.0348433d.chunk.js": "/paris-events/static/js/2.0348433d.chunk.js",
+    "static/js/2.0348433d.chunk.js.map": "/paris-events/static/js/2.0348433d.chunk.js.map",
+    "static/js/3.edd116ea.chunk.js": "/paris-events/static/js/3.edd116ea.chunk.js",
+    "static/js/3.edd116ea.chunk.js.map": "/paris-events/static/js/3.edd116ea.chunk.js.map",
+    "index.html": "/paris-events/index.html",
+    "static/css/main.7b18ae30.chunk.css.map": "/paris-events/static/css/main.7b18ae30.chunk.css.map",
+    "static/js/2.0348433d.chunk.js.LICENSE.txt": "/paris-events/static/js/2.0348433d.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/paris-events/static/media/img-paris-1-bg.a0f888c4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9e26b342.js",
+    "static/js/2.0348433d.chunk.js",
+    "static/css/main.7b18ae30.chunk.css",
+    "static/js/main.1e051b1b.chunk.js"
+  ]
+}
